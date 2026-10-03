@@ -1,0 +1,10 @@
+<div class="grid">
+  @for (opt of options(); track opt) {
+    <app-answer-option
+      [label]="opt"
+      [state]="stateFor(opt)"
+      [disabled]="answered()"
+      (picked)="picked.emit($event)"
+    />
+  }
+</div>

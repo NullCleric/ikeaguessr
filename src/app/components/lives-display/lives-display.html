@@ -1,0 +1,8 @@
+<div class="lives">
+  <div class="hearts">
+    @for (h of hearts; track h) {
+      <span class="heart" [class.lost]="h >= lives()">❤️</span>
+    }
+  </div>
+  <p class="label">{{ lang.t('livesLeft') }} : {{ lives() }}</p>
+</div>

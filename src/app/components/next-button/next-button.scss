@@ -1,0 +1,18 @@
+.next {
+  display: block;
+  margin: 1.4rem auto 0;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #1a1c2e;
+  background: #d4a548;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.next:hover {
+  background: #e0b458;
+}

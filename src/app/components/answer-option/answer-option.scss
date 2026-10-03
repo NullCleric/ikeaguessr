@@ -1,0 +1,34 @@
+.option {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;          // ← affichage en MAJUSCULES
+  color: #e5e7eb;
+  background: rgba(40, 43, 66, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+}
+.option:hover:not(:disabled) {
+  background: rgba(55, 58, 85, 0.9);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.option:disabled {
+  cursor: default;
+}
+.option.correct {
+  background: rgba(34, 139, 69, 0.85);
+  border-color: #2fae5c;
+  color: #fff;
+}
+.option.wrong {
+  background: rgba(176, 42, 42, 0.85);
+  border-color: #d14c4c;
+  color: #fff;
+}
+.option.muted {
+  opacity: 0.4;
+}

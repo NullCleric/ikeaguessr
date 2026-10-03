@@ -1,0 +1,10 @@
+<button
+  class="option"
+  [class.correct]="state() === 'correct'"
+  [class.wrong]="state() === 'wrong'"
+  [class.muted]="state() === 'muted'"
+  [disabled]="disabled()"
+  (click)="onClick()"
+>
+  {{ label() }}
+</button>

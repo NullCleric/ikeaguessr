@@ -1,0 +1,9 @@
+<div class="overlay">
+  <div class="dialog">
+    <h2 class="title">{{ lang.t('gameOver') }}</h2>
+    <p class="score">{{ lang.t('yourScore') }} : {{ score() }}</p>
+    <button class="replay" (click)="replay.emit()">
+      {{ lang.t('playAgain') }}
+    </button>
+  </div>
+</div>

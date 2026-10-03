@@ -1,0 +1,6 @@
+<div class="timer">
+  <div class="bar">
+    <div class="fill" [style.width.%]="percent()"></div>
+  </div>
+  <p class="label">{{ lang.t('timeLeft') }} : {{ remaining() }}s</p>
+</div>

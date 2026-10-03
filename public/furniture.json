@@ -1,0 +1,102 @@
+[
+  {
+    "id":1 ,
+    "name": "annons",
+    "image": "furniture/annons.png"
+  },
+  {
+    "id":2 ,
+    "name": "billy",
+    "image": "furniture/billy.png"
+  },
+  {
+    "id":3 ,
+    "name": "dyvlinge",
+    "image": "furniture/dyvlinge.png"
+  },
+  {
+    "id": 4,
+    "name": "ekenabben",
+    "image": "furniture/ekenabben.png"
+  },
+  {
+    "id":5 ,
+    "name": "hauga",
+    "image": "furniture/hauga.png"
+  },
+  {
+    "id": 6,
+    "name": "hemnes",
+    "image": "furniture/hemnes.png"
+  },
+  {
+    "id": 7,
+    "name": "kallax",
+    "image": "furniture/kallax.png"
+  },
+  {
+    "id": 8,
+    "name": "kivik",
+    "image": "furniture/kivik.png"
+  },
+  {
+    "id":9,
+    "name": "kosingen",
+    "image": "furniture/kosingen.png"
+  },
+  {
+    "id":10 ,
+    "name": "labbsal",
+    "image": "furniture/labbsal.png"
+  },
+  {
+    "id":11 ,
+    "name": "malm",
+    "image": "furniture/malm.png"
+  },
+  {
+    "id":12 ,
+    "name": "micke",
+    "image": "furniture/micke.png"
+  },
+  {
+    "id": 13,
+    "name": "nordkisa",
+    "image": "furniture/nordkisa.png"
+  },
+  {
+    "id": 14,
+    "name": "rast",
+    "image": "furniture/rast.png"
+  },
+  {
+    "id":15 ,
+    "name": "skruvby",
+    "image": "furniture/skruvby.png"
+  },
+  {
+    "id": 16,
+    "name": "storklinta",
+    "image": "furniture/storklinta.png"
+  },
+  {
+    "id": 17,
+    "name": "storsegel",
+    "image": "furniture/storsegel.png"
+  },
+  {
+    "id":18 ,
+    "name": "svartpoppel",
+    "image": "furniture/svartpoppel.png"
+  },
+  {
+    "id": 19,
+    "name": "tarno",
+    "image": "furniture/tarno.png"
+  },
+  {
+    "id": 20,
+    "name": "tversted",
+    "image": "furniture/tversted.png"
+  }
+]

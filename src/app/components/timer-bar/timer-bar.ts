@@ -20,15 +20,17 @@ export class TimerBar {
 
   protected lang = inject(Language);
 
-  // Signal interne : le flux de temps restant pour la question courante.
-  // Il est recréé à chaque nouvelle question via l'effect plus bas.
   protected remaining = signal(this.duration());
 
   constructor() {
-    // À chaque changement de question (resetKey) ou d'état (running),
-    // on (re)construit le flux de décompte.
+    this.setupTimer();
+  }
+
+  // Installe le décompte : à chaque nouvelle question (resetKey) ou
+  // changement d'état (running), on (re)construit le flux de temps restant.
+  private setupTimer(): void {
     effect((onCleanup) => {
-      const key = this.resetKey();     // dépendances réactives
+      this.resetKey();     // lu uniquement pour réabonner l'effect à chaque question
       const isRunning = this.running();
 
       if (!isRunning) {

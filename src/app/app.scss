@@ -1,5 +1,6 @@
 .app {
   min-height: 100vh;
+  min-height: 100dvh; // évite le scroll parasite dû à la barre d'adresse sur mobile
   background: linear-gradient(160deg, #2b2d42 0%, #1a1c2e 100%);
   color: #e5e7eb;
   font-family: system-ui, -apple-system, sans-serif;

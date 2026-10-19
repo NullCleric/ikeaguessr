@@ -15,6 +15,13 @@ const TRANSLATIONS = {
     yourScore: 'Votre score',
     playAgain: 'Rejouer ?',
     loading: 'Chargement…',
+    restart: 'Recommencer',
+    welcomeTitle: 'Bienvenue sur IKEA Guessr !',
+    welcomeIntro: 'BILLY, KALLAX, HEMNES… Connaissez-vous vraiment les noms des meubles IKEA ?',
+    ruleGuess: 'Un meuble s’affiche : retrouvez son nom parmi 4 propositions.',
+    ruleTimer: 'Vous avez 20 secondes pour répondre à chaque question.',
+    ruleLives: 'Vous avez 3 vies. Chaque erreur ou temps écoulé en coûte une.',
+    startGame: 'Commencer à jouer',
   },
   en: {
     subtitle: 'The Furniture Quiz Game',
@@ -28,6 +35,13 @@ const TRANSLATIONS = {
     yourScore: 'Your score',
     playAgain: 'Play again?',
     loading: 'Loading…',
+    restart: 'Restart',
+    welcomeTitle: 'Welcome to IKEA Guessr!',
+    welcomeIntro: 'BILLY, KALLAX, HEMNES… Do you really know your IKEA furniture names?',
+    ruleGuess: 'A piece of furniture appears: find its name among 4 options.',
+    ruleTimer: 'You have 20 seconds to answer each question.',
+    ruleLives: 'You have 3 lives. Each mistake or timeout costs one.',
+    startGame: 'Start playing',
   },
 } as const;
 

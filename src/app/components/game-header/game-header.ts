@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { Language } from '../../services/language';
 
 @Component({
@@ -8,5 +8,6 @@ import { Language } from '../../services/language';
   styleUrl: './game-header.scss',
 })
 export class GameHeader {
+  restart = output<void>();
   protected lang = inject(Language);
 }

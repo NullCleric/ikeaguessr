@@ -1,0 +1,14 @@
+<div class="overlay">
+  <div class="dialog">
+    <h2 class="title">{{ lang.t('welcomeTitle') }}</h2>
+    <p class="intro">{{ lang.t('welcomeIntro') }}</p>
+    <ul class="rules">
+      <li>🖼️ {{ lang.t('ruleGuess') }}</li>
+      <li>⏱️ {{ lang.t('ruleTimer') }}</li>
+      <li>❤️ {{ lang.t('ruleLives') }}</li>
+    </ul>
+    <button class="start" (click)="start.emit()">
+      {{ lang.t('startGame') }}
+    </button>
+  </div>
+</div>

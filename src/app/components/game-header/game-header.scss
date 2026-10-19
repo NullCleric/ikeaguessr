@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   width: 100%;
   padding: 1.4rem 1rem;
   text-align: center;
@@ -16,4 +17,33 @@
   margin: 0.2rem 0 0;
   font-size: 0.85rem;
   color: #9ca3af;
+}
+.restart {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  padding: 0.45rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #e5e7eb;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.restart:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+// Sur mobile, le bouton passe sous le titre pour ne pas le chevaucher.
+@media (max-width: 480px) {
+  .restart {
+    position: static;
+    transform: none;
+    margin-top: 0.8rem;
+  }
 }

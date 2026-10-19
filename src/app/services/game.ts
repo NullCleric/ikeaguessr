@@ -2,7 +2,7 @@ import { Injectable, signal, computed, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Furniture, Question } from '../models/furniture.model';
 
-export type GameState = 'loading' | 'playing' | 'answered' | 'gameover';
+export type GameState = 'loading' | 'intro' | 'playing' | 'answered' | 'gameover';
 
 const MAX_LIVES = 3;
 const OPTIONS_COUNT = 4;
@@ -19,6 +19,10 @@ export class Game {
   readonly currentQuestion = signal<Question | null>(null);
   readonly selectedAnswer = signal<string | null>(null);
 
+  // Incrémenté à chaque question : sert de clé de réinitialisation au timer,
+  // même si le même meuble retombe après un restart.
+  readonly round = signal(0);
+
   private usedIds = signal<Set<number>>(new Set());
 
   readonly isCorrect = computed(() => {
@@ -27,17 +31,19 @@ export class Game {
     return q !== null && a !== null && a === q.furniture.name;
   });
 
-  loadAndStart(): void {
+  loadCatalogue(): void {
     this.http.get<Furniture[]>('furniture.json').subscribe({
       next: (data) => {
         this.catalogue.set(data);
-        this.startGame();
+        this.state.set('intro'); // on attend que le joueur lance la partie
       },
       error: (err) => console.error('Échec du chargement du catalogue', err),
     });
   }
 
   startGame(): void {
+    if (this.catalogue().length === 0) return;
+
     this.lives.set(MAX_LIVES);
     this.score.set(0);
     this.usedIds.set(new Set());
@@ -57,6 +63,7 @@ export class Game {
 
     const options = this.buildOptions(furniture);
 
+    this.round.update((r) => r + 1);
     this.currentQuestion.set({ furniture, options });
     this.selectedAnswer.set(null);
     this.state.set('playing');

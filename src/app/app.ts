@@ -9,6 +9,7 @@ import { TimerBar } from './components/timer-bar/timer-bar';
 import { AnswerGrid } from './components/answer-grid/answer-grid';
 import { NextButton } from './components/next-button/next-button';
 import { GameOverDialog } from './components/game-over-dialog/game-over-dialog';
+import { WelcomeDialog } from './components/welcome-dialog/welcome-dialog';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { GameOverDialog } from './components/game-over-dialog/game-over-dialog';
     AnswerGrid,
     NextButton,
     GameOverDialog,
+    WelcomeDialog,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
@@ -30,7 +32,7 @@ export class App implements OnInit {
   protected lang = inject(Language);
 
   ngOnInit(): void {
-    this.game.loadAndStart();
+    this.game.loadCatalogue();
   }
 
   // Le timer tourne uniquement pendant qu'on attend une réponse.
@@ -38,6 +40,8 @@ export class App implements OnInit {
 
   // On a répondu (ou le temps a expiré) : on montre la correction.
   protected hasAnswered = computed(() => this.game.state() === 'answered');
+
+  protected isIntro = computed(() => this.game.state() === 'intro');
 
   protected isGameOver = computed(() => this.game.state() === 'gameover');
 }

@@ -1,5 +1,5 @@
 <main class="app">
-  <app-game-header />
+  <app-game-header (restart)="game.startGame()" />
 
   @if (game.state() === 'loading') {
     <p class="loading">{{ lang.t('loading') }}</p>
@@ -11,7 +11,7 @@
 
       <app-timer-bar
         [duration]="20"
-        [resetKey]="q.furniture.id"
+        [resetKey]="game.round()"
         [running]="isPlaying()"
         (expired)="game.timeout()"
       />
@@ -28,6 +28,10 @@
         <app-next-button (clicked)="game.nextQuestion()" />
       }
     }
+  }
+
+  @if (isIntro()) {
+    <app-welcome-dialog (start)="game.startGame()" />
   }
 
   @if (isGameOver()) {
